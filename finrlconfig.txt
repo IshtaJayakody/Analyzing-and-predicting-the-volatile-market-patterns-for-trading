@@ -1,0 +1,772 @@
+ishta@ishta-VivoBook-S15-X510UF:~/Desktop$ && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev libgl1-mesa-glx swig
+bash: syntax error near unexpected token `&&'
+ishta@ishta-VivoBook-S15-X510UF:~/Desktop$ sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev libgl1-mesa-glx swig
+[sudo] password for ishta: 
+Hit:1 https://repo.bitrix.info/desktop stable InRelease
+Hit:2 https://dl.google.com/linux/chrome/deb stable InRelease                  
+Hit:3 http://security.ubuntu.com/ubuntu jammy-security InRelease               
+Hit:4 http://lk.archive.ubuntu.com/ubuntu jammy InRelease                      
+Hit:5 http://lk.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:6 http://lk.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:7 https://ppa.launchpadcontent.net/nm-l2tp/network-manager-l2tp/ubuntu jammy InRelease
+Reading package lists... Done                 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+libopenmpi-dev is already the newest version (4.1.2-2ubuntu1).
+swig is already the newest version (4.0.2-1ubuntu1).
+cmake is already the newest version (3.22.1-1ubuntu1.22.04.1).
+python3-dev is already the newest version (3.10.6-1~22.04).
+zlib1g-dev is already the newest version (1:1.2.11.dfsg-2ubuntu9.2).
+libgl1-mesa-glx is already the newest version (23.0.4-0ubuntu1~22.04.1).
+0 upgraded, 0 newly installed, 0 to remove and 31 not upgraded.
+ishta@ishta-VivoBook-S15-X510UF:~/Desktop$ pip install git+https://github.com/AI4Finance-Foundation/FinRL.git
+Collecting git+https://github.com/AI4Finance-Foundation/FinRL.git
+  Cloning https://github.com/AI4Finance-Foundation/FinRL.git to /tmp/pip-req-build-u1xlok4a
+  Running command git clone --filter=blob:none --quiet https://github.com/AI4Finance-Foundation/FinRL.git /tmp/pip-req-build-u1xlok4a
+  Resolved https://github.com/AI4Finance-Foundation/FinRL.git to commit 34a5a4be96109af4bb9e7a34877e975cd10c0b50
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting elegantrl@ git+https://github.com/AI4Finance-Foundation/ElegantRL.git#egg=elegantrl (from finrl==0.3.6)
+  Cloning https://github.com/AI4Finance-Foundation/ElegantRL.git to /tmp/pip-install-q5nd37uc/elegantrl_ab7a46387206485a94de30a5267e4b7e
+  Running command git clone --filter=blob:none --quiet https://github.com/AI4Finance-Foundation/ElegantRL.git /tmp/pip-install-q5nd37uc/elegantrl_ab7a46387206485a94de30a5267e4b7e
+  Resolved https://github.com/AI4Finance-Foundation/ElegantRL.git to commit b4b9d662b9f9cb7cc368ac2b1036b5119eb20be4
+  Preparing metadata (setup.py) ... done
+Collecting alpaca-trade-api<4,>=3 (from finrl==0.3.6)
+  Obtaining dependency information for alpaca-trade-api<4,>=3 from https://files.pythonhosted.org/packages/0b/b2/4557d0a4c837b020bc5c8971e8fde8b976e332d5c225476699e0b5e30b41/alpaca_trade_api-3.2.0-py3-none-any.whl.metadata
+  Using cached alpaca_trade_api-3.2.0-py3-none-any.whl.metadata (29 kB)
+Collecting ccxt<4,>=3 (from finrl==0.3.6)
+  Obtaining dependency information for ccxt<4,>=3 from https://files.pythonhosted.org/packages/c6/c3/5082649cf584dae9ee18d7d90895475e8f382b52e9c8588320f477639e04/ccxt-3.1.60-py2.py3-none-any.whl.metadata
+  Using cached ccxt-3.1.60-py2.py3-none-any.whl.metadata (108 kB)
+Collecting exchange-calendars<5,>=4 (from finrl==0.3.6)
+  Obtaining dependency information for exchange-calendars<5,>=4 from https://files.pythonhosted.org/packages/fa/ba/c732f63611d8ca1161f31b06662e4098d9bbe2654e5fbd4ebcd6fc9c13d7/exchange_calendars-4.5.1-py3-none-any.whl.metadata
+  Using cached exchange_calendars-4.5.1-py3-none-any.whl.metadata (37 kB)
+Collecting jqdatasdk<2,>=1 (from finrl==0.3.6)
+  Obtaining dependency information for jqdatasdk<2,>=1 from https://files.pythonhosted.org/packages/7d/1c/bba4af78a19ed7497816dd99cab12f095957e1c0bb6a43b5a7b033be450c/jqdatasdk-1.9.2-py3-none-any.whl.metadata
+  Using cached jqdatasdk-1.9.2-py3-none-any.whl.metadata (5.7 kB)
+Collecting pyfolio<0.10,>=0.9 (from finrl==0.3.6)
+  Using cached pyfolio-0.9.2.tar.gz (91 kB)
+  Preparing metadata (setup.py) ... done
+Collecting pyportfolioopt<2,>=1 (from finrl==0.3.6)
+  Using cached pyportfolioopt-1.5.5-py3-none-any.whl (61 kB)
+Collecting ray[default,tune]<3,>=2 (from finrl==0.3.6)
+  Obtaining dependency information for ray[default,tune]<3,>=2 from https://files.pythonhosted.org/packages/1f/57/3b2da3f88544949ccd35df0a9aba7358cff248046404b8720a2bd9ce95e1/ray-2.9.0-cp311-cp311-manylinux2014_x86_64.whl.metadata
+  Using cached ray-2.9.0-cp311-cp311-manylinux2014_x86_64.whl.metadata (13 kB)
+Requirement already satisfied: scikit-learn<2,>=1 in /home/ishta/anaconda3/lib/python3.11/site-packages (from finrl==0.3.6) (1.3.0)
+Collecting stable-baselines3[extra]>=2.0.0a5 (from finrl==0.3.6)
+  Obtaining dependency information for stable-baselines3[extra]>=2.0.0a5 from https://files.pythonhosted.org/packages/bc/da/5cf97297d42fd6b83938a2103fac82a948ae1b0c031796caf84cb921d37e/stable_baselines3-2.3.0a1-py3-none-any.whl.metadata
+  Using cached stable_baselines3-2.3.0a1-py3-none-any.whl.metadata (5.0 kB)
+Collecting stockstats<0.6,>=0.5 (from finrl==0.3.6)
+  Obtaining dependency information for stockstats<0.6,>=0.5 from https://files.pythonhosted.org/packages/89/c3/82708cf1d219d762d6bb1a05428d918ad3f68c26b7f6e10a7449942a12c8/stockstats-0.5.4-py2.py3-none-any.whl.metadata
+  Using cached stockstats-0.5.4-py2.py3-none-any.whl.metadata (26 kB)
+Collecting wrds<4,>=3 (from finrl==0.3.6)
+  Using cached wrds-3.1.6-py3-none-any.whl (12 kB)
+Collecting yfinance<0.3,>=0.2 (from finrl==0.3.6)
+  Obtaining dependency information for yfinance<0.3,>=0.2 from https://files.pythonhosted.org/packages/58/f7/a966b800b49cb5379e348bf0717df481051714a99ece15289718562f6952/yfinance-0.2.35-py2.py3-none-any.whl.metadata
+  Using cached yfinance-0.2.35-py2.py3-none-any.whl.metadata (11 kB)
+INFO: pip is looking at multiple versions of finrl to determine which version is compatible with other requirements. This could take a while.
+ERROR: Package 'finrl' requires a different Python: 3.11.5 not in '<3.11,>=3.10'
+ishta@ishta-VivoBook-S15-X510UF:~/Desktop$ python3.10 -m venv myenv
+The virtual environment was not created successfully because ensurepip is not
+available.  On Debian/Ubuntu systems, you need to install the python3-venv
+package using the following command.
+
+    apt install python3.10-venv
+
+You may need to use sudo with that command.  After installing the python3-venv
+package, recreate your virtual environment.
+
+Failing command: /home/ishta/Desktop/myenv/bin/python3.10
+
+ishta@ishta-VivoBook-S15-X510UF:~/Desktop$ sudo apt install python3.10-venv
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  python3-pip-whl python3-setuptools-whl
+The following NEW packages will be installed:
+  python3-pip-whl python3-setuptools-whl python3.10-venv
+0 upgraded, 3 newly installed, 0 to remove and 31 not upgraded.
+Need to get 2,473 kB of archives.
+After this operation, 2,884 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://lk.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3-pip-whl all 22.0.2+dfsg-1ubuntu0.4 [1,680 kB]
+Get:2 http://lk.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3-setuptools-whl all 59.6.0-1.2ubuntu0.22.04.1 [788 kB]
+Get:3 http://lk.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3.10-venv amd64 3.10.12-1~22.04.3 [5,716 B]
+Fetched 2,473 kB in 3s (729 kB/s)           
+Selecting previously unselected package python3-pip-whl.
+(Reading database ... 224341 files and directories currently installed.)
+Preparing to unpack .../python3-pip-whl_22.0.2+dfsg-1ubuntu0.4_all.deb ...
+Unpacking python3-pip-whl (22.0.2+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package python3-setuptools-whl.
+Preparing to unpack .../python3-setuptools-whl_59.6.0-1.2ubuntu0.22.04.1_all.deb ...
+Unpacking python3-setuptools-whl (59.6.0-1.2ubuntu0.22.04.1) ...
+Selecting previously unselected package python3.10-venv.
+Preparing to unpack .../python3.10-venv_3.10.12-1~22.04.3_amd64.deb ...
+Unpacking python3.10-venv (3.10.12-1~22.04.3) ...
+Setting up python3-setuptools-whl (59.6.0-1.2ubuntu0.22.04.1) ...
+Setting up python3-pip-whl (22.0.2+dfsg-1ubuntu0.4) ...
+Setting up python3.10-venv (3.10.12-1~22.04.3) ...
+ishta@ishta-VivoBook-S15-X510UF:~/Desktop$ python3.10 -m venv myenv
+ishta@ishta-VivoBook-S15-X510UF:~/Desktop$ source myenv/bin/activate  # On Windows, use `myenv\Scripts\activate`
+(myenv) ishta@ishta-VivoBook-S15-X510UF:~/Desktop$ pip install git+https://github.com/AI4Finance-Foundation/FinRL.git
+Collecting git+https://github.com/AI4Finance-Foundation/FinRL.git
+  Cloning https://github.com/AI4Finance-Foundation/FinRL.git to /tmp/pip-req-build-us2wty7q
+  Running command git clone --filter=blob:none --quiet https://github.com/AI4Finance-Foundation/FinRL.git /tmp/pip-req-build-us2wty7q
+  Resolved https://github.com/AI4Finance-Foundation/FinRL.git to commit 34a5a4be96109af4bb9e7a34877e975cd10c0b50
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting elegantrl@ git+https://github.com/AI4Finance-Foundation/ElegantRL.git#egg=elegantrl
+  Cloning https://github.com/AI4Finance-Foundation/ElegantRL.git to /tmp/pip-install-vmm362v3/elegantrl_12b3262f719849c6b283d0fa00c32a0c
+  Running command git clone --filter=blob:none --quiet https://github.com/AI4Finance-Foundation/ElegantRL.git /tmp/pip-install-vmm362v3/elegantrl_12b3262f719849c6b283d0fa00c32a0c
+  Resolved https://github.com/AI4Finance-Foundation/ElegantRL.git to commit b4b9d662b9f9cb7cc368ac2b1036b5119eb20be4
+  Preparing metadata (setup.py) ... done
+Collecting jqdatasdk<2,>=1
+  Downloading jqdatasdk-1.9.2-py3-none-any.whl (167 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 167.1/167.1 KB 264.1 kB/s eta 0:00:00
+Collecting exchange-calendars<5,>=4
+  Downloading exchange_calendars-4.5.1-py3-none-any.whl (191 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 191.3/191.3 KB 608.8 kB/s eta 0:00:00
+Collecting yfinance<0.3,>=0.2
+  Downloading yfinance-0.2.35-py2.py3-none-any.whl (72 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.2/72.2 KB 91.3 kB/s eta 0:00:00
+Collecting pyfolio<0.10,>=0.9
+  Using cached pyfolio-0.9.2.tar.gz (91 kB)
+  Preparing metadata (setup.py) ... done
+Collecting wrds<4,>=3
+  Using cached wrds-3.1.6-py3-none-any.whl (12 kB)
+Collecting stockstats<0.6,>=0.5
+  Downloading stockstats-0.5.4-py2.py3-none-any.whl (21 kB)
+Collecting pyportfolioopt<2,>=1
+  Using cached pyportfolioopt-1.5.5-py3-none-any.whl (61 kB)
+Collecting stable-baselines3[extra]>=2.0.0a5
+  Downloading stable_baselines3-2.3.0a1-py3-none-any.whl (181 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.7/181.7 KB 430.5 kB/s eta 0:00:00
+Collecting ray[default,tune]<3,>=2
+  Downloading ray-2.9.0-cp310-cp310-manylinux2014_x86_64.whl (64.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 MB 636.9 kB/s eta 0:00:00
+Collecting scikit-learn<2,>=1
+  Downloading scikit_learn-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.8/10.8 MB 640.6 kB/s eta 0:00:00
+Collecting ccxt<4,>=3
+  Downloading ccxt-3.1.60-py2.py3-none-any.whl (4.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 1.0 MB/s eta 0:00:00
+Collecting alpaca-trade-api<4,>=3
+  Downloading alpaca_trade_api-3.2.0-py3-none-any.whl (34 kB)
+Collecting PyYAML==6.0.1
+  Downloading PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (705 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 705.5/705.5 KB 764.6 kB/s eta 0:00:00
+Collecting deprecation==2.1.0
+  Downloading deprecation-2.1.0-py2.py3-none-any.whl (11 kB)
+Collecting requests<3,>2
+  Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 KB 114.7 kB/s eta 0:00:00
+Collecting pandas>=0.18.1
+  Downloading pandas-2.1.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 1.1 MB/s eta 0:00:00
+Collecting websockets<11,>=9.0
+  Downloading websockets-10.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (106 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.8/106.8 KB 358.2 kB/s eta 0:00:00
+Collecting urllib3<2,>1.24
+  Downloading urllib3-1.26.18-py2.py3-none-any.whl (143 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 143.8/143.8 KB 349.7 kB/s eta 0:00:00
+Collecting numpy>=1.11.1
+  Downloading numpy-1.26.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 932.7 kB/s eta 0:00:00
+Collecting msgpack==1.0.3
+  Downloading msgpack-1.0.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (323 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 323.7/323.7 KB 348.0 kB/s eta 0:00:00
+Collecting aiohttp<4,>=3.8.3
+  Downloading aiohttp-3.9.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 632.2 kB/s eta 0:00:00
+Collecting websocket-client<2,>=0.56.0
+  Downloading websocket_client-1.7.0-py3-none-any.whl (58 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.5/58.5 KB 121.4 kB/s eta 0:00:00
+Collecting packaging
+  Downloading packaging-23.2-py3-none-any.whl (53 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.0/53.0 KB 101.7 kB/s eta 0:00:00
+Collecting certifi>=2018.1.18
+  Downloading certifi-2023.11.17-py3-none-any.whl (162 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.5/162.5 KB 269.6 kB/s eta 0:00:00
+Collecting yarl>=1.7.2
+  Downloading yarl-1.9.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (301 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 301.6/301.6 KB 477.6 kB/s eta 0:00:00
+Collecting aiodns>=1.1.1
+  Downloading aiodns-3.1.1-py3-none-any.whl (5.4 kB)
+Collecting setuptools>=60.9.0
+  Downloading setuptools-69.0.3-py3-none-any.whl (819 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 819.5/819.5 KB 711.9 kB/s eta 0:00:00
+Collecting cryptography>=2.6.1
+  Downloading cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl (4.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 878.8 kB/s eta 0:00:00
+Collecting pyluach
+  Downloading pyluach-2.2.0-py3-none-any.whl (25 kB)
+Collecting tzdata
+  Downloading tzdata-2023.4-py2.py3-none-any.whl (346 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.6/346.6 KB 374.3 kB/s eta 0:00:00
+Collecting korean-lunar-calendar
+  Downloading korean_lunar_calendar-0.3.1-py3-none-any.whl (9.0 kB)
+Collecting toolz
+  Downloading toolz-0.12.0-py3-none-any.whl (55 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.8/55.8 KB 117.9 kB/s eta 0:00:00
+Collecting python-dateutil
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 KB 377.4 kB/s eta 0:00:00
+Collecting pymysql>=0.7.6
+  Downloading PyMySQL-1.1.0-py3-none-any.whl (44 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 KB 82.2 kB/s eta 0:00:00
+Collecting six
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting thriftpy2>=0.3.9
+  Downloading thriftpy2-0.4.17.tar.gz (519 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 519.4/519.4 KB 682.6 kB/s eta 0:00:00
+  Installing build dependencies ... done
+  WARNING: Missing build requirements in pyproject.toml for thriftpy2>=0.3.9 from https://files.pythonhosted.org/packages/1d/5c/852a627317a75e0ec19f42b955ef115b0906c43ee4c7595c112a652f0b20/thriftpy2-0.4.17.tar.gz#sha256=190f35c32da9146d1fdd822f46b6a0ad543572ea405ca6853b4ec7b128efbc0d (from jqdatasdk<2,>=1->finrl==0.3.6).
+  WARNING: The project does not specify a build backend, and pip cannot fall back to setuptools without 'wheel'.
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting SQLAlchemy>=1.2.8
+  Downloading SQLAlchemy-2.0.25-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 1.2 MB/s eta 0:00:00
+Collecting empyrical>=0.5.0
+  Downloading empyrical-0.5.5.tar.gz (52 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.8/52.8 KB 109.6 kB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Collecting ipython>=3.2.3
+  Downloading ipython-8.20.0-py3-none-any.whl (809 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 809.2/809.2 KB 614.5 kB/s eta 0:00:00
+Collecting matplotlib>=1.4.0
+  Downloading matplotlib-3.8.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 657.8 kB/s eta 0:00:00
+Collecting pytz>=2014.10
+  Downloading pytz-2023.3.post1-py2.py3-none-any.whl (502 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 502.5/502.5 KB 650.2 kB/s eta 0:00:00
+Collecting scipy>=0.14.0
+  Downloading scipy-1.11.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (36.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.4/36.4 MB 3.3 MB/s eta 0:00:00
+Collecting seaborn>=0.7.1
+  Downloading seaborn-0.13.1-py3-none-any.whl (294 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.8/294.8 KB 728.4 kB/s eta 0:00:00
+Collecting cvxpy<2.0.0,>=1.1.19
+  Downloading cvxpy-1.4.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 1.5 MB/s eta 0:00:00
+Collecting click>=7.0
+  Downloading click-8.1.7-py3-none-any.whl (97 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 KB 229.6 kB/s eta 0:00:00
+Collecting filelock
+  Downloading filelock-3.13.1-py3-none-any.whl (11 kB)
+Collecting aiosignal
+  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting frozenlist
+  Downloading frozenlist-1.4.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (239 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 239.5/239.5 KB 467.2 kB/s eta 0:00:00
+Collecting protobuf!=3.19.5,>=3.15.3
+  Downloading protobuf-4.25.2-cp37-abi3-manylinux2014_x86_64.whl (294 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.6/294.6 KB 600.0 kB/s eta 0:00:00
+Collecting jsonschema
+  Downloading jsonschema-4.20.0-py3-none-any.whl (84 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 84.7/84.7 KB 209.9 kB/s eta 0:00:00
+Collecting pyarrow>=6.0.1
+  Downloading pyarrow-14.0.2-cp310-cp310-manylinux_2_28_x86_64.whl (38.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.0/38.0 MB 758.2 kB/s eta 0:00:00
+Collecting fsspec
+  Downloading fsspec-2023.12.2-py3-none-any.whl (168 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 169.0/169.0 KB 500.7 kB/s eta 0:00:00
+Collecting tensorboardX>=1.9
+  Downloading tensorboardX-2.6.2.2-py2.py3-none-any.whl (101 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.7/101.7 KB 599.7 kB/s eta 0:00:00
+Collecting py-spy>=0.2.0
+  Downloading py_spy-0.3.14-py2.py3-none-manylinux_2_5_x86_64.manylinux1_x86_64.whl (3.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 1.1 MB/s eta 0:00:00
+Collecting colorful
+  Downloading colorful-0.5.6-py2.py3-none-any.whl (201 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 201.4/201.4 KB 1.4 MB/s eta 0:00:00
+Collecting grpcio>=1.42.0
+  Downloading grpcio-1.60.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 892.8 kB/s eta 0:00:00
+Collecting smart-open
+  Downloading smart_open-6.4.0-py3-none-any.whl (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.0/57.0 KB 824.2 kB/s eta 0:00:00
+Collecting opencensus
+  Downloading opencensus-0.11.4-py2.py3-none-any.whl (128 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 128.2/128.2 KB 1.0 MB/s eta 0:00:00
+Collecting virtualenv<20.21.1,>=20.0.24
+  Downloading virtualenv-20.21.0-py3-none-any.whl (8.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 1.0 MB/s eta 0:00:00
+Collecting prometheus-client>=0.7.1
+  Downloading prometheus_client-0.19.0-py3-none-any.whl (54 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.2/54.2 KB 666.6 kB/s eta 0:00:00
+Collecting aiohttp-cors
+  Downloading aiohttp_cors-0.7.0-py3-none-any.whl (27 kB)
+Collecting pydantic!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,<3
+  Downloading pydantic-2.5.3-py3-none-any.whl (381 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 381.9/381.9 KB 1.1 MB/s eta 0:00:00
+Collecting gpustat>=1.0.0
+  Downloading gpustat-1.1.1.tar.gz (98 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.1/98.1 KB 1.0 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting joblib>=1.1.1
+  Downloading joblib-1.3.2-py3-none-any.whl (302 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 302.2/302.2 KB 1.2 MB/s eta 0:00:00
+Collecting threadpoolctl>=2.0.0
+  Downloading threadpoolctl-3.2.0-py3-none-any.whl (15 kB)
+Collecting gymnasium<0.30,>=0.28.1
+  Downloading gymnasium-0.29.1-py3-none-any.whl (953 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 953.9/953.9 KB 1.4 MB/s eta 0:00:00
+Collecting cloudpickle
+  Downloading cloudpickle-3.0.0-py3-none-any.whl (20 kB)
+Collecting torch>=1.13
+  Downloading torch-2.1.2-cp310-cp310-manylinux1_x86_64.whl (670.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 670.2/670.2 MB 916.6 kB/s eta 0:00:00
+WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))': /simple/tensorboard/
+Collecting tensorboard>=2.9.1
+  Downloading tensorboard-2.15.1-py3-none-any.whl (5.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 7.2 MB/s eta 0:00:00
+Collecting shimmy[atari]~=1.3.0
+  Downloading Shimmy-1.3.0-py3-none-any.whl (37 kB)
+Collecting autorom[accept-rom-license]~=0.6.1
+  Downloading AutoROM-0.6.1-py3-none-any.whl (9.4 kB)
+Collecting psutil
+  Downloading psutil-5.9.7-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (285 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 285.5/285.5 KB 3.5 MB/s eta 0:00:00
+Collecting tqdm
+  Downloading tqdm-4.66.1-py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.3/78.3 KB 1.2 MB/s eta 0:00:00
+Collecting opencv-python
+  Downloading opencv_python-4.9.0.80-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (62.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.2/62.2 MB 823.5 kB/s eta 0:00:00
+Collecting pygame
+  Downloading pygame-2.5.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (14.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.0/14.0 MB 779.5 kB/s eta 0:00:00
+Collecting rich
+  Downloading rich-13.7.0-py3-none-any.whl (240 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.6/240.6 KB 908.6 kB/s eta 0:00:00
+Collecting pillow
+  Downloading pillow-10.2.0-cp310-cp310-manylinux_2_28_x86_64.whl (4.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 1.3 MB/s eta 0:00:00
+Collecting psycopg2-binary
+  Downloading psycopg2_binary-2.9.9-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 750.6 kB/s eta 0:00:00
+Collecting SQLAlchemy>=1.2.8
+  Downloading SQLAlchemy-1.4.51-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 924.9 kB/s eta 0:00:00
+Collecting html5lib>=1.1
+  Downloading html5lib-1.1-py2.py3-none-any.whl (112 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.2/112.2 KB 686.5 kB/s eta 0:00:00
+Collecting frozendict>=2.3.4
+  Downloading frozendict-2.4.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (116 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 116.7/116.7 KB 484.8 kB/s eta 0:00:00
+Collecting lxml>=4.9.1
+  Downloading lxml-5.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 1.0 MB/s eta 0:00:00
+Collecting multitasking>=0.0.7
+  Downloading multitasking-0.0.11-py3-none-any.whl (8.5 kB)
+Collecting peewee>=3.16.2
+  Downloading peewee-3.17.0.tar.gz (2.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 975.2 kB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting beautifulsoup4>=4.11.1
+  Downloading beautifulsoup4-4.12.2-py3-none-any.whl (142 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 143.0/143.0 KB 380.6 kB/s eta 0:00:00
+Collecting appdirs>=1.4.4
+  Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+Collecting gym
+  Downloading gym-0.26.2.tar.gz (721 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 721.7/721.7 KB 434.3 kB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting pycares>=4.0.0
+  Downloading pycares-4.4.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.7/288.7 KB 631.3 kB/s eta 0:00:00
+Collecting multidict<7.0,>=4.5
+  Downloading multidict-6.0.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (114 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.5/114.5 KB 450.0 kB/s eta 0:00:00
+Collecting attrs>=17.3.0
+  Downloading attrs-23.2.0-py3-none-any.whl (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.8/60.8 KB 391.0 kB/s eta 0:00:00
+Collecting async-timeout<5.0,>=4.0
+  Downloading async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+Collecting AutoROM.accept-rom-license
+  Downloading AutoROM.accept-rom-license-0.6.1.tar.gz (434 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 434.7/434.7 KB 924.4 kB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting soupsieve>1.2
+  Downloading soupsieve-2.5-py3-none-any.whl (36 kB)
+Collecting cffi>=1.12
+  Downloading cffi-1.16.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 KB 866.7 kB/s eta 0:00:00
+Collecting scs>=3.0
+  Downloading scs-3.2.4.post1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 907.1 kB/s eta 0:00:00
+Collecting pybind11
+  Downloading pybind11-2.11.1-py3-none-any.whl (227 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 227.7/227.7 KB 955.3 kB/s eta 0:00:00
+Collecting ecos>=2
+  Downloading ecos-2.0.12-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (220 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 220.3/220.3 KB 977.5 kB/s eta 0:00:00
+Collecting osqp>=0.6.2
+  Downloading osqp-0.6.3-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (298 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 298.8/298.8 KB 1.6 MB/s eta 0:00:00
+Collecting clarabel>=0.5.0
+  Downloading clarabel-0.6.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 2.0 MB/s eta 0:00:00
+Collecting pandas-datareader>=0.2
+  Downloading pandas_datareader-0.10.0-py3-none-any.whl (109 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.5/109.5 KB 1.0 MB/s eta 0:00:00
+Collecting nvidia-ml-py>=11.450.129
+  Downloading nvidia_ml_py-12.535.133-py3-none-any.whl (37 kB)
+Collecting blessed>=1.17.1
+  Downloading blessed-1.20.0-py2.py3-none-any.whl (58 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.4/58.4 KB 431.3 kB/s eta 0:00:00
+Collecting typing-extensions>=4.3.0
+  Using cached typing_extensions-4.9.0-py3-none-any.whl (32 kB)
+Collecting farama-notifications>=0.0.1
+  Using cached Farama_Notifications-0.0.4-py3-none-any.whl (2.5 kB)
+Collecting webencodings
+  Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Collecting matplotlib-inline
+  Downloading matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+Collecting stack-data
+  Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+Collecting pexpect>4.3
+  Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 KB 394.2 kB/s eta 0:00:00
+Collecting jedi>=0.16
+  Downloading jedi-0.19.1-py2.py3-none-any.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 2.1 MB/s eta 0:00:00
+Collecting prompt-toolkit<3.1.0,>=3.0.41
+  Downloading prompt_toolkit-3.0.43-py3-none-any.whl (386 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 386.1/386.1 KB 1.3 MB/s eta 0:00:00
+Collecting exceptiongroup
+  Downloading exceptiongroup-1.2.0-py3-none-any.whl (16 kB)
+Collecting pygments>=2.4.0
+  Downloading pygments-2.17.2-py3-none-any.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 2.2 MB/s eta 0:00:00
+Collecting decorator
+  Downloading decorator-5.1.1-py3-none-any.whl (9.1 kB)
+Collecting traitlets>=5
+  Downloading traitlets-5.14.1-py3-none-any.whl (85 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.4/85.4 KB 829.2 kB/s eta 0:00:00
+Collecting pyparsing>=2.3.1
+  Downloading pyparsing-3.1.1-py3-none-any.whl (103 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.1/103.1 KB 801.2 kB/s eta 0:00:00
+Collecting contourpy>=1.0.1
+  Downloading contourpy-1.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (310 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 KB 2.0 MB/s eta 0:00:00
+Collecting cycler>=0.10
+  Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Collecting kiwisolver>=1.3.1
+  Downloading kiwisolver-1.4.5-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 581.9 kB/s eta 0:00:00
+Collecting fonttools>=4.22.0
+  Downloading fonttools-4.47.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 335.9 kB/s eta 0:00:00
+Collecting pydantic-core==2.14.6
+  Downloading pydantic_core-2.14.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 626.0 kB/s eta 0:00:00
+Collecting annotated-types>=0.4.0
+  Downloading annotated_types-0.6.0-py3-none-any.whl (12 kB)
+Collecting charset-normalizer<4,>=2
+  Using cached charset_normalizer-3.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+Collecting idna<4,>=2.5
+  Using cached idna-3.6-py3-none-any.whl (61 kB)
+Collecting ale-py~=0.8.1
+  Downloading ale_py-0.8.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 1.2 MB/s eta 0:00:00
+Collecting greenlet!=0.4.17
+  Downloading greenlet-3.0.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (616 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 616.0/616.0 KB 1.4 MB/s eta 0:00:00
+Collecting werkzeug>=1.0.1
+  Downloading werkzeug-3.0.1-py3-none-any.whl (226 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.7/226.7 KB 1.3 MB/s eta 0:00:00
+Collecting google-auth<3,>=1.6.3
+  Downloading google_auth-2.26.2-py2.py3-none-any.whl (186 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 186.5/186.5 KB 1.4 MB/s eta 0:00:00
+Collecting protobuf!=3.19.5,>=3.15.3
+  Downloading protobuf-4.23.4-cp37-abi3-manylinux2014_x86_64.whl (304 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 304.5/304.5 KB 1.6 MB/s eta 0:00:00
+Collecting google-auth-oauthlib<2,>=0.5
+  Downloading google_auth_oauthlib-1.2.0-py2.py3-none-any.whl (24 kB)
+Collecting markdown>=2.6.8
+  Downloading Markdown-3.5.2-py3-none-any.whl (103 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.9/103.9 KB 676.7 kB/s eta 0:00:00
+Collecting absl-py>=0.4
+  Downloading absl_py-2.0.0-py3-none-any.whl (130 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.2/130.2 KB 909.0 kB/s eta 0:00:00
+Collecting tensorboard-data-server<0.8.0,>=0.7.0
+  Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 1.1 MB/s eta 0:00:00
+Collecting ply<4.0,>=3.4
+  Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 KB 996.5 kB/s eta 0:00:00
+Collecting nvidia-cuda-cupti-cu12==12.1.105
+  Downloading nvidia_cuda_cupti_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (14.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.1/14.1 MB 2.3 MB/s eta 0:00:00
+Collecting nvidia-cuda-runtime-cu12==12.1.105
+  Downloading nvidia_cuda_runtime_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (823 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 823.6/823.6 KB 2.4 MB/s eta 0:00:00
+Collecting nvidia-cusparse-cu12==12.1.0.106
+  Downloading nvidia_cusparse_cu12-12.1.0.106-py3-none-manylinux1_x86_64.whl (196.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.0/196.0 MB 774.6 kB/s eta 0:00:00
+Collecting sympy
+  Downloading sympy-1.12-py3-none-any.whl (5.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.7/5.7 MB 3.8 MB/s eta 0:00:00
+Collecting networkx
+  Downloading networkx-3.2.1-py3-none-any.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 2.9 MB/s eta 0:00:00
+Collecting nvidia-curand-cu12==10.3.2.106
+  Downloading nvidia_curand_cu12-10.3.2.106-py3-none-manylinux1_x86_64.whl (56.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.5/56.5 MB 4.1 MB/s eta 0:00:00
+Collecting nvidia-cusolver-cu12==11.4.5.107
+  Downloading nvidia_cusolver_cu12-11.4.5.107-py3-none-manylinux1_x86_64.whl (124.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.2/124.2 MB 2.8 MB/s eta 0:00:00
+Collecting jinja2
+  Downloading Jinja2-3.1.3-py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.2/133.2 KB 1.9 MB/s eta 0:00:00
+Collecting nvidia-cudnn-cu12==8.9.2.26
+  Downloading nvidia_cudnn_cu12-8.9.2.26-py3-none-manylinux1_x86_64.whl (731.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 731.7/731.7 MB 840.4 kB/s eta 0:00:00
+Collecting nvidia-nccl-cu12==2.18.1
+  Downloading nvidia_nccl_cu12-2.18.1-py3-none-manylinux1_x86_64.whl (209.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.8/209.8 MB 2.0 MB/s eta 0:00:00
+Collecting nvidia-nvtx-cu12==12.1.105
+  Downloading nvidia_nvtx_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (99 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.1/99.1 KB 654.3 kB/s eta 0:00:00
+Collecting nvidia-cublas-cu12==12.1.3.1
+  Downloading nvidia_cublas_cu12-12.1.3.1-py3-none-manylinux1_x86_64.whl (410.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 410.6/410.6 MB 1.4 MB/s eta 0:00:00
+Collecting nvidia-cufft-cu12==11.0.2.54
+  Downloading nvidia_cufft_cu12-11.0.2.54-py3-none-manylinux1_x86_64.whl (121.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.6/121.6 MB 3.5 MB/s eta 0:00:00
+Collecting triton==2.1.0
+  Downloading triton-2.1.0-0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.2/89.2 MB 4.3 MB/s eta 0:00:00
+Collecting nvidia-cuda-nvrtc-cu12==12.1.105
+  Downloading nvidia_cuda_nvrtc_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (23.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.7/23.7 MB 8.2 MB/s eta 0:00:00
+Collecting nvidia-nvjitlink-cu12
+  Downloading nvidia_nvjitlink_cu12-12.3.101-py3-none-manylinux1_x86_64.whl (20.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.5/20.5 MB 8.5 MB/s eta 0:00:00
+Collecting platformdirs<4,>=2.4
+  Downloading platformdirs-3.11.0-py3-none-any.whl (17 kB)
+Collecting distlib<1,>=0.3.6
+  Downloading distlib-0.3.8-py2.py3-none-any.whl (468 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 468.9/468.9 KB 6.4 MB/s eta 0:00:00
+Collecting gym-notices>=0.0.4
+  Downloading gym_notices-0.0.8-py3-none-any.whl (3.0 kB)
+Collecting pygame
+  Downloading pygame-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 7.8 MB/s eta 0:00:00
+Collecting box2d-py==2.3.5
+  Downloading box2d-py-2.3.5.tar.gz (374 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 374.4/374.4 KB 3.8 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Collecting swig==4.*
+  Downloading swig-4.1.1.post1-py2.py3-none-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 6.3 MB/s eta 0:00:00
+Collecting referencing>=0.28.4
+  Downloading referencing-0.32.1-py3-none-any.whl (26 kB)
+Collecting rpds-py>=0.7.1
+  Downloading rpds_py-0.17.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 3.3 MB/s eta 0:00:00
+Collecting jsonschema-specifications>=2023.03.6
+  Downloading jsonschema_specifications-2023.12.1-py3-none-any.whl (18 kB)
+Collecting opencensus-context>=0.1.3
+  Downloading opencensus_context-0.1.3-py2.py3-none-any.whl (5.1 kB)
+Collecting google-api-core<3.0.0,>=1.0.0
+  Downloading google_api_core-2.15.0-py3-none-any.whl (121 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 122.0/122.0 KB 1.7 MB/s eta 0:00:00
+Collecting markdown-it-py>=2.2.0
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 KB 2.5 MB/s eta 0:00:00
+Collecting importlib-resources
+  Downloading importlib_resources-6.1.1-py3-none-any.whl (33 kB)
+Collecting wcwidth>=0.1.4
+  Downloading wcwidth-0.2.13-py2.py3-none-any.whl (34 kB)
+Collecting pycparser
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.7/118.7 KB 1.9 MB/s eta 0:00:00
+Collecting googleapis-common-protos<2.0.dev0,>=1.56.2
+  Downloading googleapis_common_protos-1.62.0-py2.py3-none-any.whl (228 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.7/228.7 KB 1.6 MB/s eta 0:00:00
+Collecting pyasn1-modules>=0.2.1
+  Downloading pyasn1_modules-0.3.0-py2.py3-none-any.whl (181 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.3/181.3 KB 1.4 MB/s eta 0:00:00
+Collecting rsa<5,>=3.1.4
+  Downloading rsa-4.9-py3-none-any.whl (34 kB)
+Collecting cachetools<6.0,>=2.0.0
+  Downloading cachetools-5.3.2-py3-none-any.whl (9.3 kB)
+Collecting requests-oauthlib>=0.7.0
+  Downloading requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+Collecting parso<0.9.0,>=0.8.3
+  Downloading parso-0.8.3-py2.py3-none-any.whl (100 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.8/100.8 KB 691.4 kB/s eta 0:00:00
+Collecting mdurl~=0.1
+  Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Collecting qdldl
+  Downloading qdldl-0.1.7.post0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 8.3 MB/s eta 0:00:00
+Collecting ptyprocess>=0.5
+  Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Collecting MarkupSafe>=2.1.1
+  Downloading MarkupSafe-2.1.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Collecting pure-eval
+  Downloading pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Collecting executing>=1.2.0
+  Downloading executing-2.0.1-py2.py3-none-any.whl (24 kB)
+Collecting asttokens>=2.1.0
+  Downloading asttokens-2.4.1-py2.py3-none-any.whl (27 kB)
+Collecting mpmath>=0.19
+  Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 KB 3.4 MB/s eta 0:00:00
+Collecting pyasn1<0.6.0,>=0.4.6
+  Downloading pyasn1-0.5.1-py2.py3-none-any.whl (84 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 84.9/84.9 KB 701.5 kB/s eta 0:00:00
+Collecting oauthlib>=3.0.0
+  Downloading oauthlib-3.2.2-py3-none-any.whl (151 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.7/151.7 KB 1.2 MB/s eta 0:00:00
+Using legacy 'setup.py install' for pyfolio, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for elegantrl, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for empyrical, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for box2d-py, since package 'wheel' is not installed.
+Building wheels for collected packages: finrl, gpustat, peewee, thriftpy2, gym, AutoROM.accept-rom-license
+  Building wheel for finrl (pyproject.toml) ... done
+  Created wheel for finrl: filename=finrl-0.3.6-py3-none-any.whl size=4688962 sha256=2aa48bf48734a497df940eb82fa43d8a1740cc2e9be8d4a95e50935f7bbb02b3
+  Stored in directory: /tmp/pip-ephem-wheel-cache-r9gmrekb/wheels/72/3b/1a/0fc805a8cc65ecd5bfe4f74a3c586b6075678b8ba53fd8f749
+  Building wheel for gpustat (pyproject.toml) ... done
+  Created wheel for gpustat: filename=gpustat-1.1.1-py3-none-any.whl size=26535 sha256=565a5ae9b3805fe439cdb580989aa9d414fc27d3adf0909d01b63001b7d496df
+  Stored in directory: /home/ishta/.cache/pip/wheels/ec/d7/80/a71ba3540900e1f276bcae685efd8e590c810d2108b95f1e47
+  Building wheel for peewee (pyproject.toml) ... done
+  Created wheel for peewee: filename=peewee-3.17.0-py3-none-any.whl size=135721 sha256=0797b879841dd1317511cb0f6e5126254988556e4f5a592f627b50f849cf2ed1
+  Stored in directory: /home/ishta/.cache/pip/wheels/c7/70/ad/212867e96e7004265a69c4aa5dcff00a95f547a67ba26e7e76
+  Building wheel for thriftpy2 (pyproject.toml) ... done
+  Created wheel for thriftpy2: filename=thriftpy2-0.4.17-cp310-cp310-linux_x86_64.whl size=1381529 sha256=d6278dbba20ee3e44fcc6c85bf0655a5f5e8f3b5862cce8969c7b22213f04519
+  Stored in directory: /home/ishta/.cache/pip/wheels/b3/ca/c1/bd8e4cd94145e4e79882fdf705ca021a7a7632248ce6d1d4f4
+  Building wheel for gym (pyproject.toml) ... done
+  Created wheel for gym: filename=gym-0.26.2-py3-none-any.whl size=827619 sha256=d0deba91664ec359a862d0525a9c216e61ad8d8ee4af1efe548b8edc8ae42981
+  Stored in directory: /home/ishta/.cache/pip/wheels/b9/22/6d/3e7b32d98451b4cd9d12417052affbeeeea012955d437da1da
+  Building wheel for AutoROM.accept-rom-license (pyproject.toml) ... done
+  Created wheel for AutoROM.accept-rom-license: filename=AutoROM.accept_rom_license-0.6.1-py3-none-any.whl size=446660 sha256=e15903a4280a4e104690d5712334d3ecb1b0d736edfe17311edf025c4628b4cc
+  Stored in directory: /home/ishta/.cache/pip/wheels/6b/1b/ef/a43ff1a2f1736d5711faa1ba4c1f61be1131b8899e6a057811
+Successfully built finrl gpustat peewee thriftpy2 gym AutoROM.accept-rom-license
+Installing collected packages: webencodings, wcwidth, swig, pytz, py-spy, pure-eval, ptyprocess, ply, peewee, opencensus-context, nvidia-ml-py, multitasking, msgpack, mpmath, korean-lunar-calendar, gym-notices, farama-notifications, distlib, colorful, box2d-py, appdirs, websockets, websocket-client, urllib3, tzdata, typing-extensions, traitlets, tqdm, toolz, threadpoolctl, tensorboard-data-server, sympy, soupsieve, smart-open, six, setuptools, rpds-py, PyYAML, pyparsing, pymysql, pyluach, pygments, pygame, pycparser, pybind11, pyasn1, psycopg2-binary, psutil, protobuf, prompt-toolkit, prometheus-client, platformdirs, pillow, pexpect, parso, packaging, oauthlib, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufft-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, multidict, mdurl, MarkupSafe, markdown, lxml, kiwisolver, joblib, importlib-resources, idna, grpcio, greenlet, fsspec, frozenlist, frozendict, fonttools, filelock, executing, exceptiongroup, decorator, cycler, cloudpickle, click, charset-normalizer, certifi, cachetools, attrs, async-timeout, annotated-types, absl-py, yarl, werkzeug, virtualenv, triton, thriftpy2, tensorboardX, SQLAlchemy, scipy, rsa, requests, referencing, python-dateutil, pydantic-core, pyasn1-modules, pyarrow, opencv-python, nvidia-cusparse-cu12, nvidia-cudnn-cu12, matplotlib-inline, markdown-it-py, jinja2, jedi, html5lib, gymnasium, gym, googleapis-common-protos, deprecation, contourpy, cffi, blessed, beautifulsoup4, asttokens, ale-py, aiosignal, stack-data, shimmy, scs, scikit-learn, rich, requests-oauthlib, qdldl, pydantic, pycares, pandas, nvidia-cusolver-cu12, matplotlib, jsonschema-specifications, gpustat, google-auth, ecos, cryptography, clarabel, AutoROM.accept-rom-license, autorom, aiohttp, yfinance, wrds, torch, stockstats, seaborn, pandas-datareader, osqp, jsonschema, jqdatasdk, ipython, google-auth-oauthlib, google-api-core, exchange-calendars, alpaca-trade-api, aiohttp-cors, aiodns, tensorboard, stable-baselines3, ray, opencensus, empyrical, elegantrl, cvxpy, ccxt, pyportfolioopt, pyfolio, finrl
+  Running setup.py install for box2d-py ... done
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 59.6.0
+    Uninstalling setuptools-59.6.0:
+      Successfully uninstalled setuptools-59.6.0
+  Running setup.py install for empyrical ... done
+  Running setup.py install for elegantrl ... done
+  Running setup.py install for pyfolio ... done
+Successfully installed AutoROM.accept-rom-license-0.6.1 MarkupSafe-2.1.3 PyYAML-6.0.1 SQLAlchemy-1.4.51 absl-py-2.0.0 aiodns-3.1.1 aiohttp-3.9.1 aiohttp-cors-0.7.0 aiosignal-1.3.1 ale-py-0.8.1 alpaca-trade-api-3.2.0 annotated-types-0.6.0 appdirs-1.4.4 asttokens-2.4.1 async-timeout-4.0.3 attrs-23.2.0 autorom-0.6.1 beautifulsoup4-4.12.2 blessed-1.20.0 box2d-py-2.3.5 cachetools-5.3.2 ccxt-3.1.60 certifi-2023.11.17 cffi-1.16.0 charset-normalizer-3.3.2 clarabel-0.6.0 click-8.1.7 cloudpickle-3.0.0 colorful-0.5.6 contourpy-1.2.0 cryptography-41.0.7 cvxpy-1.4.1 cycler-0.12.1 decorator-5.1.1 deprecation-2.1.0 distlib-0.3.8 ecos-2.0.12 elegantrl-0.3.6 empyrical-0.5.5 exceptiongroup-1.2.0 exchange-calendars-4.5.1 executing-2.0.1 farama-notifications-0.0.4 filelock-3.13.1 finrl-0.3.6 fonttools-4.47.2 frozendict-2.4.0 frozenlist-1.4.1 fsspec-2023.12.2 google-api-core-2.15.0 google-auth-2.26.2 google-auth-oauthlib-1.2.0 googleapis-common-protos-1.62.0 gpustat-1.1.1 greenlet-3.0.3 grpcio-1.60.0 gym-0.26.2 gym-notices-0.0.8 gymnasium-0.29.1 html5lib-1.1 idna-3.6 importlib-resources-6.1.1 ipython-8.20.0 jedi-0.19.1 jinja2-3.1.3 joblib-1.3.2 jqdatasdk-1.9.2 jsonschema-4.20.0 jsonschema-specifications-2023.12.1 kiwisolver-1.4.5 korean-lunar-calendar-0.3.1 lxml-5.1.0 markdown-3.5.2 markdown-it-py-3.0.0 matplotlib-3.8.2 matplotlib-inline-0.1.6 mdurl-0.1.2 mpmath-1.3.0 msgpack-1.0.3 multidict-6.0.4 multitasking-0.0.11 networkx-3.2.1 numpy-1.26.3 nvidia-cublas-cu12-12.1.3.1 nvidia-cuda-cupti-cu12-12.1.105 nvidia-cuda-nvrtc-cu12-12.1.105 nvidia-cuda-runtime-cu12-12.1.105 nvidia-cudnn-cu12-8.9.2.26 nvidia-cufft-cu12-11.0.2.54 nvidia-curand-cu12-10.3.2.106 nvidia-cusolver-cu12-11.4.5.107 nvidia-cusparse-cu12-12.1.0.106 nvidia-ml-py-12.535.133 nvidia-nccl-cu12-2.18.1 nvidia-nvjitlink-cu12-12.3.101 nvidia-nvtx-cu12-12.1.105 oauthlib-3.2.2 opencensus-0.11.4 opencensus-context-0.1.3 opencv-python-4.9.0.80 osqp-0.6.3 packaging-23.2 pandas-2.1.4 pandas-datareader-0.10.0 parso-0.8.3 peewee-3.17.0 pexpect-4.9.0 pillow-10.2.0 platformdirs-3.11.0 ply-3.11 prometheus-client-0.19.0 prompt-toolkit-3.0.43 protobuf-4.23.4 psutil-5.9.7 psycopg2-binary-2.9.9 ptyprocess-0.7.0 pure-eval-0.2.2 py-spy-0.3.14 pyarrow-14.0.2 pyasn1-0.5.1 pyasn1-modules-0.3.0 pybind11-2.11.1 pycares-4.4.0 pycparser-2.21 pydantic-2.5.3 pydantic-core-2.14.6 pyfolio-0.9.2 pygame-2.1.0 pygments-2.17.2 pyluach-2.2.0 pymysql-1.1.0 pyparsing-3.1.1 pyportfolioopt-1.5.5 python-dateutil-2.8.2 pytz-2023.3.post1 qdldl-0.1.7.post0 ray-2.9.0 referencing-0.32.1 requests-2.31.0 requests-oauthlib-1.3.1 rich-13.7.0 rpds-py-0.17.1 rsa-4.9 scikit-learn-1.3.2 scipy-1.11.4 scs-3.2.4.post1 seaborn-0.13.1 setuptools-69.0.3 shimmy-1.3.0 six-1.16.0 smart-open-6.4.0 soupsieve-2.5 stable-baselines3-2.3.0a1 stack-data-0.6.3 stockstats-0.5.4 swig-4.1.1.post1 sympy-1.12 tensorboard-2.15.1 tensorboard-data-server-0.7.2 tensorboardX-2.6.2.2 threadpoolctl-3.2.0 thriftpy2-0.4.17 toolz-0.12.0 torch-2.1.2 tqdm-4.66.1 traitlets-5.14.1 triton-2.1.0 typing-extensions-4.9.0 tzdata-2023.4 urllib3-1.26.18 virtualenv-20.21.0 wcwidth-0.2.13 webencodings-0.5.1 websocket-client-1.7.0 websockets-10.4 werkzeug-3.0.1 wrds-3.1.6 yarl-1.9.4 yfinance-0.2.35
+(myenv) ishta@ishta-VivoBook-S15-X510UF:~/Desktop$ git clone https://github.com/AI4Finance-Foundation/FinRL.git
+Cloning into 'FinRL'...
+remote: Enumerating objects: 13025, done.
+remote: Counting objects: 100% (13025/13025), done.
+remote: Compressing objects: 100% (4348/4348), done.
+remote: Total 13025 (delta 8713), reused 12787 (delta 8588), pack-reused 0
+Receiving objects: 100% (13025/13025), 79.29 MiB | 3.44 MiB/s, done.
+Resolving deltas: 100% (8713/8713), done.
+(myenv) ishta@ishta-VivoBook-S15-X510UF:~/Desktop$ ls
+FinRL  myenv
+(myenv) ishta@ishta-VivoBook-S15-X510UF:~/Desktop$ cd FinRL/
+(myenv) ishta@ishta-VivoBook-S15-X510UF:~/Desktop/FinRL$ ls
+1.66.32  docker  docs  examples  figs  finrl  LICENSE  poetry.lock  pyproject.toml  README.md  requirements.txt  setup.cfg  setup.py  unit_tests
+(myenv) ishta@ishta-VivoBook-S15-X510UF:~/Desktop/FinRL$ cd finrl/
+(myenv) ishta@ishta-VivoBook-S15-X510UF:~/Desktop/FinRL/finrl$ ls
+agents  applications  config_private.py  config.py  config_tickers.py  __init__.py  __main__.py  main.py  meta  plot.py  README.md  test.py  trade.py  train.py
+(myenv) ishta@ishta-VivoBook-S15-X510UF:~/Desktop/FinRL/finrl$ cd ../
+(myenv) ishta@ishta-VivoBook-S15-X510UF:~/Desktop/FinRL$ ls
+1.66.32  docker  docs  examples  figs  finrl  LICENSE  poetry.lock  pyproject.toml  README.md  requirements.txt  setup.cfg  setup.py  unit_tests
+(myenv) ishta@ishta-VivoBook-S15-X510UF:~/Desktop/FinRL$ jupyter notebook
+
+  _   _          _      _
+ | | | |_ __  __| |__ _| |_ ___
+ | |_| | '_ \/ _` / _` |  _/ -_)
+  \___/| .__/\__,_\__,_|\__\___|
+       |_|
+                       
+Read the migration plan to Notebook 7 to learn about the new features and the actions to take if you are using extensions.
+
+https://jupyter-notebook.readthedocs.io/en/latest/migrate_to_notebook7.html
+
+Please note that updating to Notebook 7 might break some of your extensions.
+
+[W 16:27:51.858 NotebookApp] Loading JupyterLab as a classic notebook (v6) extension.
+[I 2024-01-16 16:27:51.873 LabApp] JupyterLab extension loaded from /home/ishta/anaconda3/lib/python3.11/site-packages/jupyterlab
+[I 2024-01-16 16:27:51.874 LabApp] JupyterLab application directory is /home/ishta/anaconda3/share/jupyter/lab
+[I 16:28:01.931 NotebookApp] Serving notebooks from local directory: /home/ishta/Desktop/FinRL
+[I 16:28:01.931 NotebookApp] Jupyter Notebook 6.5.4 is running at:
+[I 16:28:01.931 NotebookApp] http://localhost:8888/?token=05a6957e41920038db271a8259a4d8ede4faec13119ae589
+[I 16:28:01.931 NotebookApp]  or http://127.0.0.1:8888/?token=05a6957e41920038db271a8259a4d8ede4faec13119ae589
+[I 16:28:01.931 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 16:28:02.135 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/ishta/.local/share/jupyter/runtime/nbserver-42597-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=05a6957e41920038db271a8259a4d8ede4faec13119ae589
+     or http://127.0.0.1:8888/?token=05a6957e41920038db271a8259a4d8ede4faec13119ae589
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+^C[I 16:29:19.451 NotebookApp] interrupted
+Serving notebooks from local directory: /home/ishta/Desktop/FinRL
+0 active kernels
+Jupyter Notebook 6.5.4 is running at:
+http://localhost:8888/?token=05a6957e41920038db271a8259a4d8ede4faec13119ae589
+ or http://127.0.0.1:8888/?token=05a6957e41920038db271a8259a4d8ede4faec13119ae589
+Shutdown this notebook server (y/[n])? y
+[C 16:29:24.187 NotebookApp] Shutdown confirmed
+[I 16:29:24.188 NotebookApp] Shutting down 0 kernels
+[I 16:29:24.189 NotebookApp] Shutting down 0 terminals
+(myenv) ishta@ishta-VivoBook-S15-X510UF:~/Desktop/FinRL$ cd ../
+(myenv) ishta@ishta-VivoBook-S15-X510UF:~/Desktop$ ls
+FinRL  myenv
+(myenv) ishta@ishta-VivoBook-S15-X510UF:~/Desktop$ cd FinRL/
+(myenv) ishta@ishta-VivoBook-S15-X510UF:~/Desktop/FinRL$ jupyter notebook
+
+  _   _          _      _
+ | | | |_ __  __| |__ _| |_ ___
+ | |_| | '_ \/ _` / _` |  _/ -_)
+  \___/| .__/\__,_\__,_|\__\___|
+       |_|
+                       
+Read the migration plan to Notebook 7 to learn about the new features and the actions to take if you are using extensions.
+
+https://jupyter-notebook.readthedocs.io/en/latest/migrate_to_notebook7.html
+
+Please note that updating to Notebook 7 might break some of your extensions.
+
+[W 16:29:43.780 NotebookApp] Loading JupyterLab as a classic notebook (v6) extension.
+[I 2024-01-16 16:29:43.783 LabApp] JupyterLab extension loaded from /home/ishta/anaconda3/lib/python3.11/site-packages/jupyterlab
+[I 2024-01-16 16:29:43.783 LabApp] JupyterLab application directory is /home/ishta/anaconda3/share/jupyter/lab
+[I 16:29:44.877 NotebookApp] Serving notebooks from local directory: /home/ishta/Desktop/FinRL
+[I 16:29:44.877 NotebookApp] Jupyter Notebook 6.5.4 is running at:
+[I 16:29:44.877 NotebookApp] http://localhost:8888/?token=3ce97622afacc815b888e6375adf9e723aa0dad5ae1bc633
+[I 16:29:44.877 NotebookApp]  or http://127.0.0.1:8888/?token=3ce97622afacc815b888e6375adf9e723aa0dad5ae1bc633
+[I 16:29:44.877 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 16:29:44.894 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/ishta/.local/share/jupyter/runtime/nbserver-42718-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=3ce97622afacc815b888e6375adf9e723aa0dad5ae1bc633
+     or http://127.0.0.1:8888/?token=3ce97622afacc815b888e6375adf9e723aa0dad5ae1bc633
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+
+
