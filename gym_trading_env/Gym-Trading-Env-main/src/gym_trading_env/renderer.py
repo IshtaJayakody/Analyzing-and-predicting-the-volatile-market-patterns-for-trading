@@ -4,7 +4,7 @@ from pyecharts.globals import CurrentConfig
 from pyecharts import options as opts
 from pyecharts.charts import Bar
 
-from .utils.charts import charts
+from utils.charts import charts
 from pathlib import Path 
 import glob
 import pandas as pd
